@@ -22,9 +22,9 @@ print("Defining varibles...")
 intents = discord.Intents().all()
 ver = "Supernova v5 DEV"
 bot = commands.Bot(command_prefix=">")
-#token = sd.askstring(ver, "Enter token:")
+token = sd.askstring(ver, "Enter token:")
 #BELOW VARIBLE IS FOR DEV ONLY!! UNCOMMENT IF YOU ARE MODIFIYING THIS CODE!
-token = "OTc3NTM1MDgxMzUyNjU4OTc0.G2F4Hf.m-RTCYyc_IAd6THRf6OpNimZbiEEonKG-SSGM4"
+token = "Token here"
 ANTI_NUKES = ["Protection X#1252", "Security#1120", "Wick#3938"]
 TARGETS = ["Snipe#1460", "Frauder#0724", "KingofShadows#4639", "sachiko#6354"]
 TRUSTED = ["Nothecker#8491", "The_SysKill#1878", "Dragoblade#3001"]
