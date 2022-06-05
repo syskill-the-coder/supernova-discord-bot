@@ -24,7 +24,7 @@ ver = "Supernova v5 DEV"
 bot = commands.Bot(command_prefix=">")
 #token = sd.askstring(ver, "Enter token:")
 #BELOW VARIBLE IS FOR DEV ONLY!! UNCOMMENT IF YOU ARE MODIFIYING THIS CODE!
-token = "OTc3NTM1MDgxMzUyNjU4OTc0.Gm_HwA._8STmMeMoNA1rKFRcO-3ZiCMVXc1-RzY3Q_KuI"
+token = "token"
 ANTI_NUKES = ["Protection X#1252", "Security#1120", "Wick#3938"]
 TARGETS = ["Snipe#1460", "Frauder#0724", "KingofShadows#4639", "sachiko#6354"]
 TRUSTED = ["Nothecker#8491", "The_SysKill#1878", "Dragoblade#3001"]
