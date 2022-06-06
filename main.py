@@ -90,7 +90,7 @@ class MyHelp(commands.HelpCommand):
         return '%s%s %s' % (self.clean_prefix, command.qualified_name, command.signature)
 
     async def send_bot_help(self, mapping):
-        embed = discord.Embed(title="Help for Supernova v5")
+        embed = discord.Embed(title="Help for ver".replace("ver",ver))
         for cog, commands in mapping.items():
             filtered = await self.filter_commands(commands, sort=True)
             command_signatures = [self.get_command_signature(c) for c in filtered]
